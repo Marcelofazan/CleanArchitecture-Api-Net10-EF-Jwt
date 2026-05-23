@@ -1,5 +1,4 @@
-## 🚀 WebAPI-AspNetCore-EF10-JWT-SQLite
-
+## 🚀 Api-Ef10-Jwt
 Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
 
 #### O que você vai encontrar neste projeto
@@ -11,7 +10,7 @@ Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autori
 | **Service** | Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários |
 | **Testes Unitários** | Separação da criação de objetos e de sua reutilização, ideal para a realização de testes unitários |
 
-#### Requisitos e Detalhe do uso de EntityFrameworkCore 10
+#### Requisitos do Projeto
 
 No Visual Studio Abra (Ferramentas) > (Gerenciador de Pacotes NuGet) > (Console do Gerenciador de Pacotes Nuget)  
 Necessário para Atualizar o Depurador com a Solução. 
@@ -35,12 +34,11 @@ Update-Database -Project "InfraEstrutura" -StartupProject "SistemaERPOnlineForca
 ```
 
 #### Executar a Aplicação
-
 - Após o Migrations, executar a aplicação **https://localhost:7092/Swagger/index.html** (ou na porta exibida no terminal). 
 
 - O banco SQLite **(`SistemaERPOnlineForcaDeVendasAPI.db`)** é criado na raiz do projeto, após o (Build).
 
-#### 🧪 Execução Inicial de Endpoints
+#### 🧪 Executar Endpoints
 
 **1 -Registrar usuário**
 - Enviar POST / Usuario: **https://localhost:7092/api/auth/registro**, selecionar Guia Body e enviar RAW e enviar o seguinte JSON 
@@ -83,12 +81,10 @@ Enviar POST / Produto: https://localhost:7092/api/Produtos, selecionar Guia Body
 	}
    ```
 
-#### Health
 
-Health Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
-GET http://localhost:7092/health 
+- **Health** Checa o servidor, verifica o estado da API e do banco de dados (útil para monitorização e orquestração).
+- **GET (http://localhost:7092/health)**
 
-#### Rotas dos métodos e funções
 ```bash
 Metodo: POST /api/auth/registro            Função: Registo de novo admin                JWT: Não 
 Metodo: POST /api/auth/login               Função: Login e obter token JWT              JWT: Não
@@ -96,14 +92,14 @@ Metodo: GET /health                        Função: Health check (API + base de
 Metodo: GET/POST /api/Produtos             Função: Listar / Criar produtos              JWT: Sim
 Metodo: GET/PUT/DELETE /api/Produtos/{id}  Função: Obter / Atualizar / Excluir produto  JWT: Sim
 ```
+
 #### Executar Testes Unitários (Developer PowerShell)
 ```bash
 dotnet test SistemaERPOnlineForcaDeVendasAPI.Testes/SistemaERPOnlineForcaDeVendasAPI.Testes.csproj
 ```
-
 Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos repositórios.
 
-#### ⚙️ Configuração
+#### Configuração
 - **Banco:** SQLite, arquivo `SistemaERPOnlineForcaDeVendasAPI.db` na raiz do projeto (não versionado). Connection string em `appsettings.json` (`ConnectionStrings:DefaultConnection`).
 - **JWT:** Em `appsettings.json`, substitua `Jwt:Key` por uma chave segura com **mínimo 32 caracteres** (ou defina a variável de ambiente `Jwt__Key`). Em produção use sempre variáveis de ambiente ou User Secrets.
 
