@@ -1,5 +1,5 @@
 ## 🚀 Api10-EF-Jwt
-Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT com banco de dados SQLite
+Exemplo de criação de WebAPI com Clean Arquitetura com autenticação e autorização utilizando JWT, desenvolvido em .NET 10 com banco de dados SQLite
 
 #### O que você vai encontrar neste projeto
 
