@@ -1,5 +1,5 @@
-## 🚀 CleanArchitecture-Api10-EF-Jwt
-Exemplo de API Arquitetura Clean Architecture com Autenticação Jwt em C# .NET 10 com banco de dados SQLite.
+## 🚀 CleanArchitecture-Net10-EF-Jwt
+Exemplo de projeto Clean Architecture com Autenticação Jwt em C# .NET 10 com banco de dados SQLite.
 
 | Tecnologia | Descrição |
 |-----------|-----------|
