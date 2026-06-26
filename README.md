@@ -1,4 +1,4 @@
-## 🚀 CleanArchitecture-Net10-EF-Jwt
+## 🌐 CleanArchitecture-Net10-EF-Jwt
 Exemplo de projeto Clean Architecture com Autenticação Jwt em C# .NET 10 com banco de dados SQLite.
 
 | Tecnologia | Descrição |
@@ -98,7 +98,7 @@ Os testes cobrem a camada **Aplicacao** (ProdutoService), com mocks dos reposit�
 - **Banco:** SQLite, arquivo `SistemaERPOnlineForcaDeVendasAPI.db` na raiz do projeto (não versionado). Connection string em `appsettings.json` (`ConnectionStrings:DefaultConnection`).
 - **JWT:** Em `appsettings.json`, substitua `Jwt:Key` por uma chave segura com **mínimo 32 caracteres** (ou defina a variável de ambiente `Jwt__Key`). Em produção use sempre variáveis de ambiente ou User Secrets.
 
-## 🌐 Razor-Consumir-Api-Jwt
+## 📁 Razor-Consumir-Api-Jwt
 Exemplo de CRUD com Autenticação Jwt em C# ASP.NET Core 8.
 
 #### 🔄 Executar a aplicação
